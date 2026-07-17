@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return 'NIS : 25967, Nama : Alfenno Septian, Kelas : XI RPLB';
+    return 'NIS : 25967<br> Nama : Alfenno Septian<br> Kelas : XI RPLB';
 });
 
 Route::get('/world', [WelcomeController::class, 'hello']);
