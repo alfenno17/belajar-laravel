@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function hello()
+    public function web()
     {
         return view('hello')
             ->with('name', 'Andi')
