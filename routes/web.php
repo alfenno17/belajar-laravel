@@ -1,40 +1,27 @@
 <?php
 
-use App\Http\Controllers\Controller;
-use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return 'Hi! Selamat Datang di Website Laravel';
+use App\Http\Controllers\WelcomeController;
+use iluminate\Support\Facades\controller;
+use app\Http\Controllers\pagecontroller;
+use Illuminate\Support\Facades\View; 
+Route::get('/', function ($id) {
+    echo 'selamat datang di website laravel';
 });
-
-Route::get('/world', [WelcomeController::class, 'hello']);
-
-Route::get('siswa', function () {});
-Route::post('siswa', function () {});
-Route::put('siswa', function () {});
-Route::delete('siswa', function () {});
-Route::get('siswa/{id}', function ($id) {});
-Route::put('siswa/{id}', function ($id) {});
+Route::get('about', function () {
+    echo 'nim: 25967 <br>
+    nama: Alfenno Septian Ramadhan <br>
+    kelas: IX RPLB<br>' ;
+});
+route::get('artikel/{id}', function ($id) {
+    echo 'halaman artikel dengan id ' . $id;
+});
+Route::get('/', [WelcomeController::class, 'web']);
+Route::get('siswa', function ($id) {}); 
+Route::put('siswa', function ($id) {}); 
+Route::delete('siswa', function ($id) {}); 
+Route::get('siswa/{id}', function ($id) {}); 
+Route::put('siswa/{id}', function ($id) {}); 
 Route::delete('siswa/{id}', function ($id) {});
-
-
-Route::get('/articles/{id}', function ($id) {
-    return "Ini adalah halaman Artikel dengan ID: " . $id;
-});
-
-Route::get('/hello', [WelcomeController::class, 'hello']);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/app', function () {
-    return view('child');
-});
-
-Route::get('/alert', function () {
-    return view('home');
-});
-
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('app');
+Route::get('/name', function () {return view('hello', ['name' => 'Andi']); }); 
+Route::get('/dashboard', function () {return view('layout.master');});
