@@ -27,11 +27,11 @@ Route::get('/hello', [WelcomeController::class, 'hello']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/profil', function () {
+Route::get('/app', function () {
     return view('child');
 });
 
-Route::get('/alert', function () {
+Route::get('/home', function () {
     return view('home');
 });
 
