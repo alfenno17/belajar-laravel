@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dokumen @yield('title')</title>
+    <title>Document @yield('title')</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
