@@ -31,7 +31,7 @@ Route::get('/app', function () {
     return view('child');
 });
 
-Route::get('/home', function () {
+Route::get('/alert', function () {
     return view('home');
 });
 
