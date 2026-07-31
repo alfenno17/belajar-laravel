@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     echo 'Selamat datang di laravel';
@@ -15,7 +16,7 @@ Route::get('about', function () {
 });
 
 Route::get('artikel/{id}', function ($id) {
-    echo 'halaman artikel dengan id ' . $id;
+    echo 'halaman artikel dengan id ' . $id; 
 });
 
 Route::get('siswa', function () {}); 
@@ -33,3 +34,10 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/hello', [WelcomeController::class, 'hello']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
