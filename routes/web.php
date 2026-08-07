@@ -6,13 +6,15 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    echo 'Selamat datang di laravel';
+    return view('dashboard');
 });
 
 Route::get('about', function () {
-    echo 'nis: 25967 <br>
-    nama: Alfenno Septian Ramadhan <br>
-    kelas: IX RPLB<br>';
+    return view('about', [
+        'nis' => '25967',
+        'nama' => 'Alfenno Septian Ramadhan',
+        'kelas' => 'IX RPLB',
+    ]);
 });
 
 Route::get('artikel/{id}', function ($id) {

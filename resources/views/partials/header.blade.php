@@ -1,16 +1,9 @@
-<nav class="navbar navbar-dark bg-dark px-3">
-    <a class="navbar-brand" href="{{ url('/') }}">
-        <i class="bi bi-speedometer2"></i> MyApp
-    </a>
-
-    <div class="d-flex align-items-center">
-        @auth
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button class="btn btn-outline-light btn-sm" type="submit">Logout</button>
-            </form>
-        @else
-            <a href="/login" class="btn btn-outline-light btn-sm">Login</a>
-        @endauth
+<div class="headerwrapper">
+    <div id="header" class="container">
+        <div class="logo">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('assets/images/LOGO.png') }}" alt="logo" width="165" height="74">
+            </a>
+        </div>
     </div>
-</nav>
+</div>
